@@ -1,4 +1,10 @@
-<div class="card">
+<!-- <div class="card">
+  <p>
+    <img [src]="imageSrc" [alt]="name" />
+    {{ name }}
+  </p>
+  <button (click)="sayHello()">Dire Bonjour</button>
+  <input type="text" [(ngModel)]="name" />
   <p>
     Le développeur est un informaticien qui réalise des logiciels et
     applications à partir d'un cahier des charges. Il utilise des langages
@@ -12,4 +18,25 @@
     charges. Peut conduire des projets de développement. Peut coordonner une
     équipe.
   </p>
+</div> -->
+
+<p>{{ article.title }}</p>
+<p>{{ article.author }}</p>
+<p>{{ article.content }}</p>
+<img [src]="article.image" alt="article.title" />
+
+<div>
+  <label for="comment">Ajouter un commentaire :</label>
+  <input
+    id="comment"
+    type="text"
+    [(ngModel)]="article.comment"
+    placeholder="Votre commentaire"
+  />
+
+  <p><strong>Commentaire :</strong> {{ article.comment }}</p>
+
+  <button (click)="togglePublication()">
+    {{ article.isPublished ? "Dépublier" : "Publier" }} l'article
+  </button>
 </div>
