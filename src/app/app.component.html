@@ -45,6 +45,12 @@
   }
 </ul> -->
 
+@if (publishedArticles()){
+<div>
+  <p>Aucun article publier</p>
+</div>
+}
+
 <ul>
   @for(article of articles; track $index ) { @if( article.isPublished){
   <h2 [ngClass]="{ 'popular-article': article.likes > 100 }">

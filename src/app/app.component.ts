@@ -41,7 +41,7 @@ export class AppComponent {
     },
   ];
 
-  get publishedArticlesCount() {
-    return this.articles.filter((article) => article.isPublished).length;
+  publishedArticles(): boolean {
+    return this.articles.every((article) => !article.isPublished);
   }
 }
