@@ -11,11 +11,37 @@ import { ArticleComponentComponent } from './article-component/article-component
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title: string = "Bonjour c' est Anne-Sophie";
+  articles = [
+    {
+      title: 'Angular 16: Les nouveautés',
+      author: 'Alice',
+      content: "Les nouveautés d'Angular 16 incluent...",
+      image: 'https://via.placeholder.com/350x150',
+      isPublished: true,
+      comment: '',
+      likes: 120,
+    },
+    {
+      title: 'Développer une API REST',
+      author: 'Bob',
+      content: 'Développer une API REST nécessite...',
+      image: 'https://via.placeholder.com/350x150',
+      isPublished: false,
+      comment: '',
+      likes: 75,
+    },
+    {
+      title: 'Pourquoi TypeScript est essentiel ?',
+      author: 'Charlie',
+      content: 'TypeScript apporte de la robustesse...',
+      image: 'https://via.placeholder.com/350x150',
+      isPublished: true,
+      comment: '',
+      likes: 200,
+    },
+  ];
 
-  isAdmin: boolean = false;
-
-  onClickChangeAdmin() {
-    this.isAdmin = !this.isAdmin;
+  get publishedArticlesCount() {
+    return this.articles.filter((article) => article.isPublished).length;
   }
 }
