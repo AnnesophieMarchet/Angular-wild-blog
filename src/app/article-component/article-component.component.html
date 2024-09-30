@@ -19,7 +19,7 @@
     équipe.
   </p>
 </div> -->
-
+<!-- @for(article of articles ; track $index){
 <p>{{ article.title }}</p>
 <p>{{ article.author }}</p>
 <p>{{ article.content }}</p>
@@ -36,7 +36,15 @@
 
   <p><strong>Commentaire :</strong> {{ article.comment }}</p>
 
-  <button (click)="togglePublication()">
+  <button (click)="togglePublication(article.id)">
     {{ article.isPublished ? "Dépublier" : "Publier" }} l'article
   </button>
+
+  <a [routerLink]="['/article', article.id]">Voir l'article</a>
+
+  <p>Je suis sur l' article {{ article.id }}</p>
 </div>
+} -->
+
+<h1>Détails de l'article</h1>
+<p>Article ID : {{ articleId }}</p>
