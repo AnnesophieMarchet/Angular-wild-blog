@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ArticleComponentComponent } from '../article-component/article-component.component';
 import { ContactFormComponent } from '../contact-form/contact-form.component';
+import { ParentComponent } from '../parent/parent.component';
 
 @Component({
   selector: 'app-home-page',
@@ -12,6 +13,7 @@ import { ContactFormComponent } from '../contact-form/contact-form.component';
     CommonModule,
     RouterLink,
     ContactFormComponent,
+    ParentComponent,
   ],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss',

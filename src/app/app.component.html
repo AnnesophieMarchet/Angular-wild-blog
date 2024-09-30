@@ -1,54 +1,7 @@
-<!-- <h1>Bienvenue sur le Wild Blog de {{ title }}</h1>
-<p>Congratulations! Your app is running. 🎉</p>
-<app-article-component></app-article-component>
-<ul>
-  <li>Pommes de terre</li>
-  <li [ngStyle]="{ backgroundColor: isThisIngredientVital ? 'red' : 'yellow' }">
-    Raclette
-  </li>
-  <li>Jambon</li>
-  <li [ngClass]="{ vital: isThisIngredientVital }">Cornichons</li>
-  <li>Chou-fleur</li>
-</ul>
-
-<ul *ngIf="isGuestListDisplayed">
-  <li>Brenda</li>
-  <li>Dylan</li>
-  <li>Michel Drucker</li>
-  <li>Marc Aurèle</li>
-  <li>Julie</li>
-</ul>
-
-<ul>
-  <li *ngFor="let song of songList">
-    {{ song }}
-  </li>
-</ul> -->
-
-<!-- <h1 [ngClass]="{ colorAdmin: isAdmin }">{{ title }}</h1>
-<h2 [ngStyle]="{ color: isAdmin ? 'red' : 'black' }">{{ title }}</h2>
-<button>View</button>
-<button *ngIf="isAdmin">Edit</button> -->
-
-<!-- Bouton pour changer la valeur de isAdmin -->
-<!-- <button (click)="onClickChangeAdmin()">
-  {{ isAdmin ? "Not Admin" : "Make Admin" }}
-</button>
-
-<ul>
-  @for(fruit of fruits; track $index){
-  <li>
-    {{ fruit }}
-  </li>
-  }@empty {
-  <li>Aucun fruit</li>
-  }
-</ul> -->
-
 <nav>
   <a [routerLink]="['/']">Accueil</a>
   <a [routerLink]="['/contact']">Contact</a>
 </nav>
 <!-- <app-article-component></app-article-component> -->
-
+<app-parent></app-parent>
 <router-outlet> </router-outlet>
