@@ -6,7 +6,7 @@
 </div>
 }
 
-<ul>
+<!-- <ul>
   @for(article of articles; track $index ) { @if( article.isPublished){
   <h2 [ngClass]="{ 'popular-article': article.likes > 100 }">
     {{ article.title }}
@@ -19,6 +19,13 @@
   <p [ngStyle]="{ color: article.likes > 150 ? 'green' : 'black' }">
     Likes: {{ article.likes }}
   </p>
-  <a [routerLink]="['/article', article.id]">Voir l'article</a>
+
   } }
-</ul>
+</ul> -->
+<div>
+  @for (article of articles; track $index) {
+
+  <app-article-component [article]="article"></app-article-component>
+  <a [routerLink]="['/article', article.id]">Voir l'article</a>
+  }
+</div>
