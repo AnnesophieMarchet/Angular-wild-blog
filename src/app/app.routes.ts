@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { ArticleComponentComponent } from './article-component/article-component.component';
+
 import { ContactComponent } from './contact/contact.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { NotFoundComponent } from './not-found/not-found.component';
