@@ -9,7 +9,11 @@
 <div>
   @for (article of articles; track $index) {
 
-  <app-article-component [article]="article"></app-article-component>
+  <app-article-component
+    [article]="article"
+    (notifyParent)="handleLike($event)"
+  ></app-article-component>
+  <p>{{ messageLikeFromChild }}</p>
   <a [routerLink]="['/article', article.id]">Voir l'article</a>
   }
 </div>

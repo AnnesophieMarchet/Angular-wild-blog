@@ -52,6 +52,11 @@ export class HomePageComponent {
     },
   ];
 
+  messageLikeFromChild: string = '';
+  handleLike(message: string) {
+    this.messageLikeFromChild = message;
+  }
+
   publishedArticles(): boolean {
     return this.articles.every((article) => !article.isPublished);
   }

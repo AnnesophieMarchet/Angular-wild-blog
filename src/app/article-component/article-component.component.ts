@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, Input } from '@angular/core';
+import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, RouterLink } from '@angular/router';
@@ -16,18 +16,14 @@ export class ArticleComponentComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
   @Input() article: any;
 
+  @Output() notifyParent: EventEmitter<string> = new EventEmitter<string>();
+
+  sendNotificationOutput() {
+    this.notifyParent.emit(
+      `L' article ${this.article.title} vient d'être liké`
+    );
+  }
   private articleService: ArticleService = inject(ArticleService);
-  // private articleService = inject(ArticleService);
-  // constructor(private route: ActivatedRoute) {}
-
-  // constructor(private articleService: ArticleService) {}
-
-  // ngOnInit() {
-  //   this.route.paramMap.subscribe((params: ParamMap) => {
-  //     this.articleId = Number(params.get('id'));
-  //     this.fetchArticle();
-  //   });
-  // }
 
   ngOnInit() {
     // Vérifier si l'article a été passé via @Input
