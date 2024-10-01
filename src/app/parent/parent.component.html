@@ -1,1 +1,4 @@
-<app-child [parentMessage]="messageToChild"></app-child>
+<!-- <app-child [parentMessage]="messageToChild" ></app-child> -->
+
+<app-child (notifyParent)="handleNotification($event)"></app-child>
+<p>Message recu depuis le parent :{{ messageFromChild }}</p>

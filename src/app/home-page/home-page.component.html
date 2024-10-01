@@ -6,22 +6,6 @@
 </div>
 }
 
-<!-- <ul>
-  @for(article of articles; track $index ) { @if( article.isPublished){
-  <h2 [ngClass]="{ 'popular-article': article.likes > 100 }">
-    {{ article.title }}
-  </h2>
-  <h4>Par {{ article.author }}</h4>
-  <img [src]="article.image" alt="{{ article.title }}" />
-  <p>
-    {{ article.content }}
-  </p>
-  <p [ngStyle]="{ color: article.likes > 150 ? 'green' : 'black' }">
-    Likes: {{ article.likes }}
-  </p>
-
-  } }
-</ul> -->
 <div>
   @for (article of articles; track $index) {
 

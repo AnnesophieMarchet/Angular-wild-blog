@@ -9,5 +9,9 @@ import { ChildComponent } from '../child/child.component';
   styleUrl: './parent.component.scss',
 })
 export class ParentComponent {
-  messageToChild: string = 'Bonjour depuis le parent !';
+  // messageToChild: string = 'Bonjour depuis le parent !';
+  messageFromChild: string = '';
+  handleNotification(message: string) {
+    this.messageFromChild = message;
+  }
 }

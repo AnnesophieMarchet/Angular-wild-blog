@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ParentComponent } from '../parent/parent.component';
 
 @Component({
@@ -9,5 +9,11 @@ import { ParentComponent } from '../parent/parent.component';
   styleUrl: './child.component.scss',
 })
 export class ChildComponent {
-  @Input() parentMessage: string = '';
+  // @Input() parentMessage: string = '';
+
+  @Output() notifyParent: EventEmitter<string> = new EventEmitter<string>();
+
+  sendNotification() {
+    this.notifyParent.emit("Bonjour je viens de l' enfant ");
+  }
 }

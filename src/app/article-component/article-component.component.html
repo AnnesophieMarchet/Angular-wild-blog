@@ -1,10 +1,10 @@
-<!-- <h1>Détails de l'article</h1>
-<p>Article ID : {{ articleId }}</p>
-<p>{{ article.title }}</p> -->
-<div *ngIf="article">
+<div>
+  @if(article){
   <h2>{{ article.title }}</h2>
   <h4>Par {{ article.author }}</h4>
   <img [src]="article.image" alt="{{ article.title }}" />
   <p>{{ article.content }}</p>
   <p>Likes: {{ article.likes }}</p>
+  <p>Likes: {{ article.likes }}</p>
+  }
 </div>
